@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compress images, videos, and PDFs online for free. Optimize and manipulate your files with our easy-to-use tools.">
+  <meta name="keywords" content="image compression, video compression, PDF tools, merge PDF, split PDF, compress PDF, convert PDF">
+  <meta name="author" content="Your Name">
+  <title>File Optimization Tool</title>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_AD_UNIT_ID" crossorigin="anonymous"></script>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .tool {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .tool img {
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+      border-radius: 8px;
+    }
+
+    .tool button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .tool button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>File Optimization Tool</h1>
+    <p>Optimize and manipulate your files with our easy-to-use tools.</p>
+  </header>
+
+  <main>
+    <!-- Image & Video Compression -->
+    <section id="image-video-compression">
+      <h2>Image & Video Compression</h2>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Compress Image">
+        <div>
+          <p>Compress images and videos to reduce file size without losing quality.</p>
+          <input type="file" id="file-input" accept="image/*, video/*">
+          <label for="compression-level">Compression Level:</label>
+          <select id="compression-level">
+            <option value="0.1">Low</option>
+            <option value="0.5" selected>Medium</option>
+            <option value="0.9">High</option>
+          </select>
+          <button id="compress-btn">Compress</button>
+        </div>
+      </div>
+      <div id="output"></div>
+      <a id="download-link" style="display: none;">Download Compressed File</a>
+    </section>
+
+    <!-- PDF Tools -->
+    <section id="pdf-tools">
+      <h2>PDF Tools</h2>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Merge PDF">
+        <div>
+          <p>Combine PDFs in the order you want with the easiest PDF merger available.</p>
+          <button id="merge-pdf">Merge PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Split PDF">
+        <div>
+          <p>Separate one page or a whole set for easy conversion into independent PDF files.</p>
+          <button id="split-pdf">Split PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Compress PDF">
+        <div>
+          <p>Reduce file size while optimizing for maximal PDF quality.</p>
+          <button id="compress-pdf">Compress PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="PDF to Word">
+        <div>
+          <p>Easily convert your PDF files into easy-to-edit DOC and DOCX documents.</p>
+          <button id="pdf-to-word">PDF to Word</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="PDF to PowerPoint">
+        <div>
+          <p>Turn your PDF files into easy-to-edit PPT and PPTX slideshows.</p>
+          <button id="pdf-to-ppt">PDF to PowerPoint</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="PDF to Excel">
+        <div>
+          <p>Pull data straight from PDFs into Excel spreadsheets in a few short seconds.</p>
+          <button id="pdf-to-excel">PDF to Excel</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Word to PDF">
+        <div>
+          <p>Make DOC and DOCX files easy to read by converting them to PDF.</p>
+          <button id="word-to-pdf">Word to PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="PowerPoint to PDF">
+        <div>
+          <p>Make PPT and PPTX slideshows easy to view by converting them to PDF.</p>
+          <button id="ppt-to-pdf">PowerPoint to PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Excel to PDF">
+        <div>
+          <p>Make EXCEL spreadsheets easy to read by converting them to PDF.</p>
+          <button id="excel-to-pdf">Excel to PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Edit PDF">
+        <div>
+          <p>Add text, images, shapes, or freehand annotations to a PDF document.</p>
+          <button id="edit-pdf">Edit PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="PDF to JPG">
+        <div>
+          <p>Convert each PDF page into a JPG or extract all images contained in a PDF.</p>
+          <button id="pdf-to-jpg">PDF to JPG</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="JPG to PDF">
+        <div>
+          <p>Convert JPG images to PDF in seconds. Easily adjust orientation and margins.</p>
+          <button id="jpg-to-pdf">JPG to PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Sign PDF">
+        <div>
+          <p>Sign yourself or request electronic signatures from others.</p>
+          <button id="sign-pdf">Sign PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Watermark PDF">
+        <div>
+          <p>Stamp an image or text over your PDF in seconds.</p>
+          <button id="watermark-pdf">Watermark PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Rotate PDF">
+        <div>
+          <p>Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once!</p>
+          <button id="rotate-pdf">Rotate PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="HTML to PDF">
+        <div>
+          <p>Convert webpages in HTML to PDF. Copy and paste the URL of the page you want and convert it to PDF with a click.</p>
+          <button id="html-to-pdf">HTML to PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Unlock PDF">
+        <div>
+          <p>Remove PDF password security, giving you the freedom to use your PDFs as you want.</p>
+          <button id="unlock-pdf">Unlock PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Protect PDF">
+        <div>
+          <p>Protect PDF files with a password. Encrypt PDF documents to prevent unauthorized access.</p>
+          <button id="protect-pdf">Protect PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Organize PDF">
+        <div>
+          <p>Sort pages of your PDF file however you like. Delete PDF pages or add PDF pages to your document at your convenience.</p>
+          <button id="organize-pdf">Organize PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="PDF to PDF/A">
+        <div>
+          <p>Transform your PDF to PDF/A, the ISO-standardized version of PDF for long-term archiving.</p>
+          <button id="pdf-to-pdfa">PDF to PDF/A</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Repair PDF">
+        <div>
+          <p>Repair a damaged PDF and recover data from corrupt PDF. Fix PDF files with our Repair tool.</p>
+          <button id="repair-pdf">Repair PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Add Page Numbers">
+        <div>
+          <p>Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.</p>
+          <button id="add-page-numbers">Add Page Numbers</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Scan to PDF">
+        <div>
+          <p>Capture document scans from your mobile device and send them instantly to your browser.</p>
+          <button id="scan-to-pdf">Scan to PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="OCR PDF">
+        <div>
+          <p>Easily convert scanned PDF into searchable and selectable documents.</p>
+          <button id="ocr-pdf">OCR PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Compare PDF">
+        <div>
+          <p>Show a side-by-side document comparison and easily spot changes between different file versions.</p>
+          <button id="compare-pdf">Compare PDF</button>
+        </div>
+      </div>
+      <div class="tool">
+        <img src="https://via.placeholder.com/100" alt="Redact PDF">
+        <div>
+          <p>Redact text and graphics to permanently remove sensitive information from a PDF.</p>
+          <button id="redact-pdf">Redact PDF</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- AdSense Ad Unit -->
+    <section id="ad-section">
+      <h2>Advertisement</h2>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="YOUR_ADSENSE_AD_UNIT_ID"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 File Optimization Tool. All rights reserved.</p>
+  </footer>
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/compressorjs/1.2.1/compressor.min.js"></script>
+  <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.12.4/dist/ffmpeg.min.js"></script>
+  <script>
+    // JavaScript Functionality
+    document.getElementById('compress-btn').addEventListener('click', async () => {
+      const fileInput = document.getElementById('file-input');
+      const compressionLevel = parseFloat(document.getElementById('compression-level').value);
+      const outputDiv = document.getElementById('output');
+      const downloadLink = document.getElementById('download-link');
+
+      if (!fileInput.files[0]) {
+        alert('Please select a file.');
+        return;
+      }
+
+      const file = fileInput.files[0];
+      const fileType = file.type.split('/')[0]; // 'image' or 'video'
+
+      if (fileType === 'image') {
+        // Compress image using compressorjs
+        new Compressor(file, {
+          quality: compressionLevel,
+          success(result) {
+            const compressedFile = result;
+            const url = URL.createObjectURL(compressedFile);
+            outputDiv.innerHTML = `<img src="${url}" alt="Compressed Image">`;
+            downloadLink.href = url;
+            downloadLink.download = `compressed_${file.name}`;
+            downloadLink.style.display = 'block';
+          },
+          error(err) {
+            console.error('Error compressing image:', err);
+            alert('Error compressing image. Please try again.');
+          },
+        });
+      } else if (fileType === 'video') {
+        // Compress video using ffmpeg.wasm
+        const { createFFmpeg, fetchFile } = FFmpeg;
+        const ffmpeg = createFFmpeg({ log: true });
+        await ffmpeg.load();
+
+        ffmpeg.FS('writeFile', file.name, await fetchFile(file));
+        await ffmpeg.run('-i', file.name, '-vf', `scale=iw*${compressionLevel}:ih*${compressionLevel}`, 'output.mp4');
+        const data = ffmpeg.FS('readFile', 'output.mp4');
+
+        const url = URL.createObjectURL(new Blob([data.buffer], { type: 'video/mp4' }));
+        outputDiv.innerHTML = `<video controls src="${url}"></video>`;
+        downloadLink.href = url;
+        downloadLink.download = `compressed_${file.name}`;
+        downloadLink.style.display = 'block';
+      } else {
+        alert('Unsupported file type. Please upload an image or video.');
+      }
+    });
+
+    // PDF Tools Placeholder Functions
+    document.getElementById('merge-pdf').addEventListener('click', () => alert('Merge PDF functionality coming soon!'));
+    document.getElementById('split-pdf').addEventListener('click', () => alert('Split PDF functionality coming soon!'));
+    document.getElementById('compress-pdf').addEventListener('click', () => alert('Compress PDF functionality coming soon!'));
+    // Add more event listeners for other PDF tools...
+  </script>
+</body>
+</html>
